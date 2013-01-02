@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Episodes
-permalink: episodes/
+title: News
+permalink: news/
 ---
 
 <article>
-	<h1 class="title">Episode Archive</h1>
+	<h1 class="title">News Archive</h1>
 	<section>
-		{% for post in site.categories.episode %}
+		{% for post in site.categories.news %}
 			{% capture post_month %}
 				{{post.date | date: "%m"}}
 			{% endcapture %}
