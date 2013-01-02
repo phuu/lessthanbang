@@ -6,8 +6,8 @@ layout: none
 
   <channel>
     <title>{{ site.title }}</title>
-    <link>{{ site.base }}</link>
-    <atom:link href="{{ site.base }}rss.xml" rel="self" type="application/rss+xml" />
+    <link>{{ site.url }}</link>
+    <atom:link href="{{ site.url }}rss.xml" rel="self" type="application/rss+xml" />
     <description>{{ site.description }}</description>
     <language>en-us</language>
     <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
@@ -16,10 +16,10 @@ layout: none
     {% for post in site.posts %}
     <item>
       <title>{{ post.title | replace:'&','&amp;' }}</title>
-      <link>{{ site.base }}{{ post.url }}</link>
+      <link>{{ site.url }}{{ post.url }}</link>
       <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
       <author>{{ site.title }}</author>
-      <guid>{{ site.base }}{{ post.url }}</guid>
+      <guid>{{ site.url }}{{ post.url }}</guid>
       <description>{{ post.content | replace:'<!---extended-->','' | xml_escape }}</description>
     </item>
     {% endfor %}

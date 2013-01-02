@@ -3,7 +3,7 @@ title: Less Than Bang
 description: A show by and for young and attractive web people.
 author: "Tom Ashworth & Paul Adam Davis"
 author_email: tom@phuu.net
-base: http://localhost:4001/
+url: http://lessthanbang.com/
 permalink: /:categories/:title
 date_format: "%A, %d %B %Y"
 

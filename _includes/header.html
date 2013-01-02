@@ -1,15 +1,15 @@
 <header role="banner">
   <div class="inner">
-    <h1><a href="{{ site.base }}">{{ site.title }}</a></h1>
+    <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
     <nav>
       <ul>
-        <li><a href="{{ site.base }}episodes">Episodes</a></li>
+        <li><a href="{{ site.url }}episodes">Episodes</a></li>
       </ul>
     </nav>
     <form action="https://encrypted.google.com/search" class="site-search" method="get">
       <label for="site-search-text">Search:</label>
       <input type="search" name="q">
-      <input type="hidden" name="q" value="site:{{ site.base }}">
+      <input type="hidden" name="q" value="site:{{ site.url }}">
       <button type="submit">Search</button>
     </form>
   </div>
