@@ -1,22 +1,22 @@
 ---
-layout: page
+layout: default
 ---
 
-{% for post in site.categories.episode %}
+{% for post in site.posts limit:1 %}
   <article>
-    <section>
-      <header>
-        <h1>{% if post.episode %}#{{ post.episode }} - {% endif %}<a href="{{ post.url }}">{{ post.title }}</a></h1>
+    <header>
+      <div class="inner">
+        <h1 class="h1">{% if post.episode %}#{{ post.episode }} - {% endif %}<a href="{{ post.url }}">{{ post.title }}</a></h1>
         <small>
-        <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: site.date_format }}</time> 
-      </small>
-      </header>
-      <section class="content">
+          <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ post.date | date: site.date_format }}</time>
+        </small>
+      </div>
+    </header>
+    <section class="main">
+      <div class="inner">
         {{ post.content | summarize }}
-      </section>
-      <footer>
-        <a href="{{ post.url }}">Listen&hellip;</a>
-      </footer>
+      </div>
     </section>
   </article>
 {% endfor %}
+
