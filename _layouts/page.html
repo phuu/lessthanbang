@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<article class="page">
+  {% if page.subtitle %}
+  <header>
+    <div class="inner">
+      <h2 class="subtitle">{{ page.subtitle }}</h2>
+    </div>
+  </header>
+  {% endif %}
+  <section class="main">
+    <div class="inner">
+      {{ content }}
+    </div>
+  </section>
+  <footer>
+    <div class="inner">
+      <!-- Got a question or an article you'd like to see? <a href="{{ site.base }}ask">Ask away!</a> -->
+    </div>
+  </footer>
+</article>

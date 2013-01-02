@@ -1,0 +1,16 @@
+{
+  "name": "podcarsed",
+  "version": "0.0.1",
+  "description": "Can't be arsed to write this.",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.3.17"
+  }
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/phuu/podcarsed.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README.md"
+}

@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<article>
+  <header>
+    <div class="inner">
+      <h1>#{{ page.episode }} - {{ page.title }}</h1>
+      <small>
+        <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: site.date_format }}</time>
+      </small>
+    </div>
+  </header>
+  <section class="main">
+    <div class="inner">
+      {{ content }}
+    </div>
+  </section>
+</article>

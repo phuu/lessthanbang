@@ -1,0 +1,17 @@
+# Site
+title: Less Than Bang
+author: "Tom Ashworth & Paul Adam Davis"
+author_email: tom@phuu.net
+base: http://localhost:4001/
+permalink: /:categories/:title
+date_format: "%A, %d %B %Y"
+
+# Development
+auto: true
+server: true
+server_port: 4001
+
+# Jekyll
+markdown: rdiscount
+exclude: [node_modules, less, grunt.js, Gruntfile, package.json, README.md, CNAME]
+safe: false
