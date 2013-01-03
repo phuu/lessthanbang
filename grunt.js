@@ -5,18 +5,14 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    meta: {
-      version: '0.1.0',
-      banner: '/*! PROJECT_NAME - v<%= meta.version %> - ' +
-        '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-        '* http://PROJECT_WEBSITE/\n' +
-        '* Copyright (c) <%= grunt.template.today("yyyy") %> ' +
-        'YOUR_NAME; Licensed MIT */'
-    },
     less: {
-      dev: {
+      compressed: {
+        options: {
+          compress: true,
+          yuicompress: true
+        },
         files: {
-          'assets/css/podcarsed.css': 'assets/less/podcarsed.less'
+          'assets/css/lessthanbang.css': 'assets/less/lessthanbang.less'
         }
       }
     },
