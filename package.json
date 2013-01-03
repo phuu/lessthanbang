@@ -1,14 +1,15 @@
 {
-  "name": "podcarsed",
+  "name": "lessthanbang",
   "version": "0.0.1",
   "description": "Can't be arsed to write this.",
   "dependencies": {},
   "devDependencies": {
-    "grunt": "~0.3.17"
-  }
+    "grunt": "~0.3.17",
+    "grunt-contrib-less": "~0.3.2"
+  },
   "repository": {
     "type": "git",
-    "url": "git://github.com/phuu/podcarsed.git"
+    "url": "git://github.com/phuu/lessthanbang.git"
   },
   "author": "",
   "license": "BSD",
