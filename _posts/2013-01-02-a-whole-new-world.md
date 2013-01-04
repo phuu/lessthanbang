@@ -10,7 +10,7 @@ Two [young](//twitter.com/phuunet) & [attractive](//twitter.com/PaulAdamDavis) w
 
 We'll talk about code, life, hot social drama, cool stuff we've seen and other things of the funny variety, and we'll do our best to have a guest on most shows too, including fresh thoughts from people you probably don't know, but should.
 
-* We're going to do an episode twice a month and increase that to a weekly thing it things go well.
+* We're going to do an episode twice a month, more often if things go well.
 * We're recording with good equipment, not just iPhone headsets. It won't be painful to listen to.
 * We aren't going to filter what we really want to say, and we will swear.
 

@@ -26,6 +26,11 @@ a {
   color: @col-dark;
   text-decoration: none;
   border-bottom: 1px solid;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   &:hover {
     color: @col-light;
   }
@@ -51,8 +56,10 @@ header[role="banner"] {
     font-size: 1.5em;
     margin-right: 1em;
     font-weight: normal;
-    b {
+    span {
       font-weight: bold;
+      padding-right: 0.444em;
+      color: @col-light;
     }
     a {
       color: white;
@@ -109,6 +116,10 @@ header[role="banner"] {
       padding: 0.09em 0.296em;
       width: 6em;
       -webkit-transition: all 0.1s ease-in-out;
+      -moz-transition: all 0.1s ease-in-out;
+      -ms-transition: all 0.1s ease-in-out;
+      -o-transition: all 0.1s ease-in-out;
+      transition: all 0.1s ease-in-out;
       outline: 0;
       &:focus {
         /*left: -2px;*/
@@ -131,6 +142,10 @@ header[role="banner"] {
       background: @col-light;
       outline: 2px solid transparent;
       -webkit-transition: all 0.1s ease-in-out;
+      -moz-transition: all 0.1s ease-in-out;
+      -ms-transition: all 0.1s ease-in-out;
+      -o-transition: all 0.1s ease-in-out;
+      transition: all 0.1s ease-in-out;
       &:hover {
         color: #fff;
       }
@@ -157,9 +172,9 @@ div[role="main"] {
     text-transform: uppercase;
   }
   a {
-    color: #64908A;
+    color: @col-light;
     &:hover {
-      color: darken(#64908A, 15%);
+      color: @col-dark;
     }
   }
 }
@@ -176,9 +191,6 @@ article {
     a {
       border: none;
       font-weight: bold;
-      /*&:hover {
-        color: darken(#64908A, 15%);
-      }*/
     }
   }
   .main {
