@@ -7,6 +7,11 @@
 
 @import "normalize";
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 body {
   font: @font-size @font-family;
@@ -47,9 +52,9 @@ header[role="banner"] {
   overflow: hidden;
 
   .inner {
-    width: 100%;
     max-width: 650px;
   }
+
 
   h1 {
     float: left;
@@ -107,24 +112,25 @@ header[role="banner"] {
     input[type="search"] {
       position: relative;
       display: block;
-      height: 1.5em;
+      height: 2.5em;
       float: left;
       border: none;
       background: rgba(0,0,0,.3);
       color: white;
-      line-height: 1.2;
+      line-height: 1;
+      font-size: 0.667em;
       padding: 0.09em 0.296em;
-      width: 6em;
+      width: 10em;
       -webkit-transition: all 0.1s ease-in-out;
       -moz-transition: all 0.1s ease-in-out;
       -ms-transition: all 0.1s ease-in-out;
       -o-transition: all 0.1s ease-in-out;
       transition: all 0.1s ease-in-out;
       outline: 0;
+      border-radius: 0;
       &:focus {
-        /*left: -2px;*/
         box-shadow: inset 0px 0px 0px 2px @col-light;
-        width: 10em;
+        width: 15em;
       }
     }
     button[type="submit"] {
@@ -310,16 +316,27 @@ footer[role="contentinfo"] {
   margin-bottom: 0.5em;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   header[role="banner"] .inner {
-    h1, nav, form {
+    form {
       width: auto;
       float: none;
-    }
-    form {
+      clear: both;
       padding-top: 0.5em;
+      input {
+        width: 70%;
+        &:focus {
+          width: 70%;
+        }
+      }
+      button {
+        width: 30%;
+      }
     }
   }
+}
+
+@media (max-width: 530px) {
   .adverts {
     .advert {
       width: auto;
