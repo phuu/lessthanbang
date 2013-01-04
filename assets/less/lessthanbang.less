@@ -289,6 +289,19 @@ article {
     }
   }
 }
+.advertise_link {
+  clear: both;
+  padding-top: 1em;
+  a {
+    font-size: 0.6em;
+    display: block;
+    border: 0;
+    color: #999;
+    &:hover {
+      color: @col-dark;
+    }
+  }
+}
 
 footer[role="contentinfo"] {
   border-top: 1em solid @col-light;
@@ -314,6 +327,9 @@ footer[role="contentinfo"] {
   line-height: 1.1;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+}
+.middle {
+  text-align: center;
 }
 
 @media (max-width: 600px) {
