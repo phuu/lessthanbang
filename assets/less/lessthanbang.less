@@ -349,10 +349,6 @@ footer[role="contentinfo"] {
   font-weight: normal;
   font-style: normal;
 }
-
-/*  Font Awesome styles
-    ------------------------------------------------------- */
-/* includes sprites.less reset */
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: FontAwesome;
@@ -383,10 +379,23 @@ a {
   }
 }
 .icon-twitter:before    { content: "\f099"; }
-
 .twitter_icon {
   color: #fff;
   border: 0;
+}
+
+div[role="main"] .btn {
+  background: @col-light;
+  display: inline-block;
+  padding: 4px 10px;
+  border: 0;
+  &:link, &:visited {
+    color: #fff;
+  }
+  &:hover, &:focus, &:active {
+    background: @col-dark;
+    color: #fff;
+  }
 }
 
 @media (max-width: 600px) {

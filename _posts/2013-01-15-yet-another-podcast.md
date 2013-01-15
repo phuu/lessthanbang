@@ -15,3 +15,5 @@ We'll talk about code, life, hot social drama, cool stuff we've seen and other t
 * We aren't going to filter what we really want to say, and we will swear.
 
 We have wanted to do this for a long time and we'll will give this our all to make it the best we can.
+
+Please do follow along with Twitter [@lessthanbang](http://twitter.com/lessthanbang) to keep up-to-date.
