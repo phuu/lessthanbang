@@ -7,18 +7,22 @@ permalink: news/
 <article>
 	<h1 class="title h1">News Archive</h1>
 	<section>
-		{% for post in site.categories.news %}
-			{% capture post_month %}
-				{{post.date | date: "%m"}}
-			{% endcapture %}
-			{% if post_month != prev_post_month %}
-				{% if prev_post_month %}
-					<br><!-- close month -->
+		{% if site.categories.episode %}
+			{% for post in site.categories.news %}
+				{% capture post_month %}
+					{{post.date | date: "%m"}}
+				{% endcapture %}
+				{% if post_month != prev_post_month %}
+					{% if prev_post_month %}
+						<br><!-- close month -->
+					{% endif %}
+					<b>{{post.date | date: "%B %Y"}}</b><br><!-- br is open month -->
 				{% endif %}
-				<b>{{post.date | date: "%B %Y"}}</b><br><!-- br is open month -->
-			{% endif %}
-			<a href="{{ post.url }}">{{ post.title }}</a> <time>{{post.date | date: "%A %e" }}</time><br>
-			{% capture prev_post_month %}{{post_month}}{% endcapture %}
-		{% endfor %}
+				<a href="{{ post.url }}">{{ post.title }}</a> <time>{{post.date | date: "%A %e" }}</time><br>
+				{% capture prev_post_month %}{{post_month}}{% endcapture %}
+			{% endfor %}
+		{% else %}
+			<p>No news yet. :(</p>
+		{% endif %}
 	</section>
 </article>
