@@ -14,7 +14,13 @@ layout: default
   <section class="main">
     <div class="inner">
       {{ content }}
-      {% if page.mp3_src %}<p><a href="{{ page.mp3_src }}" class="btn">Download MP3{% if page.mp3_src %} ({{ page.mp3_size }}){% endif %}</a></p>{% endif %}
+      {% if page.mp3_src %}
+        <p>
+          <a href="{{ page.mp3_src }}" class="btn">
+            Download mp3 {% if page.mp3_src %}({{ page.mp3_size }}){% endif %}
+          </a>
+        </p>
+      {% endif %}
     </div>
   </section>
 </article>
