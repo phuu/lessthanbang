@@ -1,28 +1,41 @@
 ---
 layout: none
 ---
-<?xml version="1.0"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-
-  <channel>
-    <title>{{ site.title }}</title>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ site.url }}rss.xml" rel="self" type="application/rss+xml" />
-    <description>{{ site.description | xml_escape }}</description>
-    <language>en-us</language>
-    <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-    <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
-
-    {% for post in site.posts %}
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<channel>
+  <atom:link href="{{ site.url }}rss.xml" rel="self" type="application/rss+xml" />
+  <title>Less Than Bang</title>
+  <link>http://lessthanbang.com</link>
+  <language>en-us</language>
+  <copyright>&#xA9; 2013 Less Than Bang</copyright>
+  <itunes:subtitle>A show by and for young &amp; attractive web people.</itunes:subtitle>
+  <itunes:author>paul Adam Davis &amp; Tom Ashworth</itunes:author>
+  <itunes:summary>Less Than Bang is a show by and for young &amp; attractive web people. We talk about code, web and life in this industry.</itunes:summary>
+  <itunes:explicit>yes</itunes:explicit>
+  <description>Less Than Bang is a show by and for young &amp; attractive web people. We talk about code, web and life in this industry.</description>
+  <itunes:owner>
+    <itunes:name>Paul Adam Davis &amp; Tom Ashworth</itunes:name>
+    <itunes:email>pauladamdavis@gmail.com</itunes:email>
+  </itunes:owner>
+  <itunes:image href="{{ site.url }}assets/img/itunes_large.jpg" />
+  <itunes:category text="Technology">
+    <itunes:category text="Tech News"/>
+  </itunes:category>
+  {% for post in site.categories.episode %}
     <item>
-      <title>{{ post.title | replace:'&','&amp;' }}</title>
-      <link>{{ site.url }}{{ post.url }}</link>
-      <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-      <author>{{ site.title }}</author>
-      <guid>{{ site.url }}{{ post.url }}</guid>
+      <title>{{ post.title | replace:'&','&amp;' }}</title> 
       <description>{{ post.content | replace:'<!---extended-->','' | xml_escape }}</description>
+      <itunes:image href="{{ site.url }}assets/img/itunes_large.jpg" />
+      <itunes:author>Paul Adam Davis &amp; Tom Ashworth</itunes:author>
+      <itunes:subtitle>{{ post.content | replace:'<!---extended-->','' | xml_escape }}</itunes:subtitle>
+      <itunes:summary>{{ post.content | replace:'<!---extended-->','' | xml_escape }}</itunes:summary>
+      <enclosure url="{{ post.mp3_src }}" length="{{ post.mp3_size | replace: 'mb','' | times: 1024 | times: 1024 | replace: '.','~' | split: '~' | first }}" type="audio/mpeg" />
+      <guid>{{ post.mp3_src }}</guid>
+      <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+      <itunes:duration>{{ post.mp3_length | times: 60 | replace: '.','~' | split: '~' | first }}</itunes:duration>
+      <itunes:keywords>{{ post.itunes_tags }}</itunes:keywords>
     </item>
-    {% endfor %}
-
-  </channel> 
+  {% endfor %}
+</channel>
 </rss>
