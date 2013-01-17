@@ -28,5 +28,6 @@ And here's the YAML for each file.
 
 	Shownotes & stuff, here
 
+Every field is required for the iTunes feed to work correctly.
 
 `mp3_length` is in minutes & seconds, with a dot seperating the two (using a colon causes issues)
