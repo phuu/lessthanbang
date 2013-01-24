@@ -22,6 +22,12 @@ And here's the YAML for each file.
 	category: episode
 	mp3_src: http://get.lessthanbang.com/episode-0.mp3
 	mp3_size: 27.4mb
+	mp3_length: 42:58
+	itunes_tags: new,years,resolutions,goals,code,programming
 	---
 
 	Shownotes & stuff, here
+
+Every field is required for the iTunes feed to work correctly.
+
+`mp3_length` is in minutes & seconds, with a dot seperating the two (using a colon causes issues)

@@ -229,7 +229,10 @@ article {
         color: #777;
         font-size: 0.95em;
         line-height: 1.3;
-        margin: 0.8em 0;
+        margin: 0.4em 0;
+        a {
+          border: none;
+        }
       }
     }
     blockquote {
@@ -363,6 +366,7 @@ footer[role="contentinfo"] {
   background-image: none !important;
   background-position: 0% 0%;
   background-repeat: repeat;
+  border: 0;
 }
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
@@ -379,10 +383,8 @@ a {
   }
 }
 .icon-twitter:before    { content: "\f099"; }
-.twitter_icon {
-  color: #fff;
-  border: 0;
-}
+.icon-rss:before        { content: "\f09e"; }
+
 
 div[role="main"] .btn {
   background: @col-light;
@@ -398,7 +400,7 @@ div[role="main"] .btn {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   header[role="banner"] .inner {
     form {
       width: auto;
