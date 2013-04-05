@@ -15,7 +15,7 @@ layout: default
     <section class="main">
       <div class="inner">
         {{ post.content }}
-        {% if post.mp3_src %}<p><a href="{{ post.mp3_src }}" class="btn">Download MP3{% if post.mp3_src %} ({{ post.mp3_size }}){% endif %}</a></p>{% endif %}
+        {% if post.mp3_src %}<p><a href="{{ post.mp3_src }}" download="{{ post.title }}.mp3" class="btn">Download MP3{% if post.mp3_src %} ({{ post.mp3_size }}){% endif %}</a></p>{% endif %}
       </div>
     </section>
   </article>
