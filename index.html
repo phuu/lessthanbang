@@ -18,7 +18,7 @@ layout: default
         {% if post.mp3_src %}
           <p>
             <a href="{{ post.mp3_src }}" download="{{ post.title }}.mp3" class="btn">
-              Download ({{ post.mp3_size }}, {{ post.mp3_length | replace: '.', ':' }})
+              Download ({{ post.mp3_size }} &ndash; {{ post.mp3_length | replace: '.', ':' }})
             </a>
           </p>
         {% endif %}
